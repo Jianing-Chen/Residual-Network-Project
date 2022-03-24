@@ -7,6 +7,11 @@ Our team members:
 * Name: Jianing Chen &emsp; NetID: jc10034
 * Name: Xuchen Hu &emsp; NetID: xh2090
 
+
+Link to the .ipynb file in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1y3N97Py-oafTZjyK2eEyOtuyJfkHihF2/view?usp=sharing) https://drive.google.com/file/d/1y3N97Py-oafTZjyK2eEyOtuyJfkHihF2/view?usp=sharing
+
 ## Data Augmentation
 This mini project builds a small ResNet architecture to classify images from CIFAR10 and archives over 90% accuracy. In the project, we used 7 different individual augmentation strategies including **crop, flip, color distort, cutout, rotation and Guassian blur**. In the project report we compose different augmentation together with different orders. To realize the composition we need to reconstruct the composition. 
 
