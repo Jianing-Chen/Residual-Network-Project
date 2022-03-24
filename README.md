@@ -21,3 +21,16 @@ transforms.Compose([
 
 Other compositions could be structured in the same way. In the final architecture we build the crop + Horizontal flip + cutout, the result of augmentation is shown in the figure below:
 
+![image](https://github.com/Jianing-Chen/Residual-Network-Project/blob/main/1.jpg)
+
+## Final Architecture
+The final residual architecture is 26 layers with [32,64,128,256] channels. The detail of architecture and optimization method could be checked on the model architecture block.
+
+The testing accuracy over the CIFAR10 image datasets is over 90%. The parameters of the final architecture could be download from 
+````
+from google.colab import files
+torch.save(ResNet18.state_dict(), 'project1_model.pt')
+
+# download checkpoint file
+files.download('project1_model.pt')
+````
