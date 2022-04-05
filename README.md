@@ -1,5 +1,5 @@
 # Residual-Network-Project
-This repository is for ECE-7123 Deep Learning Mini-Project1.
+This repository is for ECE-7123 Deep Learning Mini-Project1. The updated files have fixed the low accuracy problem due to normalization. Please re-evaluate the accuracy with latest files.
 
 Our team members:
 
@@ -10,7 +10,7 @@ Our team members:
 
 Link to the .ipynb file in Google Colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1y3N97Py-oafTZjyK2eEyOtuyJfkHihF2/view?usp=sharing) https://drive.google.com/file/d/1y3N97Py-oafTZjyK2eEyOtuyJfkHihF2/view?usp=sharing
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1dTOGdb-UenOuRxXyFkPnXyA9gPW9WrdL/view?usp=sharing) https://drive.google.com/file/d/1dTOGdb-UenOuRxXyFkPnXyA9gPW9WrdL/view?usp=sharing
 
 ## Data Augmentation
 This mini project builds a small ResNet architecture to classify images from CIFAR10 and archives over 90% accuracy. In the project, we used 7 different individual augmentation strategies including **crop, flip, color distort, cutout, rotation and Guassian blur**. In the project report we compose different augmentation together with different orders. To realize the composition we need to reconstruct the composition. 
@@ -20,13 +20,14 @@ For example, to build crop + vertical flip we need to build:
 transforms.Compose([
                         transforms.RandomResizedCrop(32,(0.8,1.0)),
                         transforms.RandomVerticalFlip(),
-                        transforms.ToTensor(),                 
+                        transforms.ToTensor(),
+						transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2471, 0.2435, 0.2616)),
 ])
 ````
 
 Other compositions could be structured in the same way. In the final architecture we build the crop + Horizontal flip + cutout, the result of augmentation is shown in the figure below:
 
-![image](https://github.com/Jianing-Chen/Residual-Network-Project/blob/main/1.jpg)
+![image](https://github.com/Jianing-Chen/Residual-Network-Project/blob/main/1.png)
 
 ## Final Architecture
 The final residual architecture is 26 layers with [32,64,128,256] channels. The detail of architecture and optimization method could be checked on the model architecture block.
