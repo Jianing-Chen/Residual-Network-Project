@@ -21,7 +21,7 @@ transforms.Compose([
                         transforms.RandomResizedCrop(32,(0.8,1.0)),
                         transforms.RandomVerticalFlip(),
                         transforms.ToTensor(),
-						transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2471, 0.2435, 0.2616)),
+			transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2471, 0.2435, 0.2616)),
 ])
 ````
 
